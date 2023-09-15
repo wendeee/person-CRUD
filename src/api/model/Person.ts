@@ -7,12 +7,10 @@ const PersonSchema = new Schema({
  gender: {
   type: String,
   enum: ["male", "female", "other"],
-  required: [true, "A user specify a gender"],
  },
 
  country: {
   type: String,
-  required: [true, "A user must specify a country"],
  },
 });
 

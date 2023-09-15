@@ -1,5 +1,3 @@
-import mongoose from "mongoose";
-import { getPersonByIdentifier } from "../controller/person.controller";
 import { Person } from "../model/Person";
 export const createPerson = async (data) => {
  try {
@@ -41,21 +39,6 @@ export const updatePerson = async (personIdentifier, data) => {
 };
 
 export const deletePerson = async (personIdentifier) => {
- //  try {
- //   let filter;
-
- //   // Check if personIdentifier is a valid MongoDB ObjectId (ID)
- //   if (mongoose.isValidObjectId(personIdentifier)) {
- //    filter = { _id: personIdentifier };
- //   } else {
- //    filter = { name: personIdentifier };
- //   }
- //   const person = await Person.findOneAndDelete(filter);
- //   return "Person deleted!";
- //  } catch (err) {
- //   throw err;
- //  }
-
  try {
   await Person.findOneAndDelete(personIdentifier);
   return "person deleted!";

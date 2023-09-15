@@ -5,7 +5,7 @@ const app: Express = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/person", PersonRouter);
+app.use("/api", PersonRouter);
 app.get("/", (req: Request, res: Response) => {
  res.status(200).json("Success!");
 });

@@ -86,7 +86,7 @@ npm run dev
 
 ### Add a new person
 
-- Route: /api/person
+- Route: /api
 - method: POST
 
 - 👇: Body
@@ -116,7 +116,7 @@ npm run dev
 
 #### Get person
 
-- Route: /api/person/:identifier
+- Route: /api/:identifier
 - Method: GET
 - Example: /api/person/zoe doey
 
@@ -135,7 +135,7 @@ npm run dev
 }
 ```
 
-- Example: /api/person/65048776718779f60f351287
+- Example: /api/65048776718779f60f351287
 
 👇: Response
 
@@ -156,7 +156,7 @@ npm run dev
 
 #### Get all created person
 
-- Route: /api/person
+- Route: /api
 - Method: GET
 
 👇: Response
@@ -176,7 +176,7 @@ npm run dev
 
 #### Update Person data
 
-- Route: /api/person/:identifier
+- Route: /api/:identifier
 - Method: PATCH
 - Example: /api/person/zoe
 - body{
@@ -200,7 +200,7 @@ npm run dev
 
 #### Delete Person data
 
-- Route: /api/person/:identifier
+- Route: /api/:identifier
 - Method: DELETE
 - Example: /api/person/zoe
 
