@@ -4,7 +4,7 @@
  "description": "",
  "main": "dist/server.js",
  "scripts": {
-  "build": "npm cache clean --force && npm install && rm -rf dist && NODE_OPTIONS=--max-old-space-size=4096 ./node_modules/typescript/bin/tsc ",
+  "build": "npm cache clean --force && npm install && rm -rf dist && NODE_OPTIONS=--max-old-space-size=4096 ./node_modules/typescript/bin/tsc",
   "start": "NODE_ENV=production node dist/server.js",
   "test": "echo \"Error: no test specified\" && exit 1",
   "dev": "ts-node-dev ./src/server.ts"
