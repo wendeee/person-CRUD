@@ -10,10 +10,7 @@ const appSignal = new Appsignal({
 });
 
 // import { expressErrorHandler } from "@appsignal/nodejs";
-const {
- expressMiddleware,
- expressErrorHandler,
-} = require("@appsignal/express");
+const { expressErrorHandler } = require("@appsignal/express");
 import express, { Express, Request, Response, NextFunction } from "express";
 import { AppError } from "./util";
 import { router as PersonRouter } from "./api/routes/person.route";
@@ -22,7 +19,7 @@ const app: Express = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(expressMiddleware(appSignal));
+// app.use(expressMiddleware(appSignal));
 
 app.use("/api", PersonRouter);
 app.get("/", (req: Request, res: Response) => {
