@@ -5,7 +5,7 @@
  "main": "dist/server.js",
  "scripts": {
   "build": "npm cache clean --force && npm install && rm -rf dist && NODE_OPTIONS=--max-old-space-size=4096 ./node_modules/typescript/bin/tsc",
-  "start": "cross-env NODE_ENV=production node --require ./appsignal.cjs dist/server.js",
+  "start": "cross-env NODE_ENV=production node --require dist/appsignal.cjs dist/server.js",
   "test": "echo \"Error: no test specified\" && exit 1",
   "dev": "ts-node-dev ./src/server.ts"
  },
